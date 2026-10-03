@@ -57,3 +57,24 @@ n = longitud de text1, m = longitud de text2.
 Código: [longest-common-subsequence/Solution.java](longest-common-subsequence/Solution.java)
 
 ![Accepted — Longest Common Subsequence](evidencias/longest-common-subsequence-accepted.png)
+
+
+
+## 435. Non-overlapping Intervals
+
+Enlace: https://leetcode.com/problems/non-overlapping-intervals/
+
+Familia: greedy
+
+Idea: es la selección de actividades al revés. Se ordenan los intervalos por
+su fin y se va eligiendo el siguiente que empieza cuando (o después de que)
+termina el último aceptado. Criterio greedy: entre los que caben, quedarse con
+el que termina antes, porque deja más espacio libre. La respuesta es
+n − (cuántos se quedaron).
+
+Complejidad: tiempo O(n log n) por el ordenamiento (la pasada es O(n));
+espacio O(1) extra, aparte del que use el sort. n = número de intervalos.
+
+Código: [non-overlapping-intervals/Solution.java](non-overlapping-intervals/Solution.java)
+
+![Accepted — Non-overlapping Intervals](evidencias/non-overlapping-intervals-accepted.png)
