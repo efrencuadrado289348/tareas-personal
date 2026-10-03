@@ -78,3 +78,28 @@ espacio O(1) extra, aparte del que use el sort. n = número de intervalos.
 Código: [non-overlapping-intervals/Solution.java](non-overlapping-intervals/Solution.java)
 
 ![Accepted — Non-overlapping Intervals](evidencias/non-overlapping-intervals-accepted.png)
+
+
+
+
+## 39. Combination Sum
+
+Enlace: https://leetcode.com/problems/combination-sum/
+
+Familia: backtracking
+
+Idea: se arma la combinación de forma recursiva. Se elige candidates[i], se
+busca con lo que falta (target − suma) volviendo a empezar en i para poder
+repetir el número, y al regresar se quita el último elegido (se deshace) para
+probar el siguiente. Si lo que falta es 0 se guarda una copia; si un número es
+mayor que lo que falta, se poda esa rama. No se vuelve a índices menores, así
+no se repiten combinaciones en otro orden.
+
+Complejidad: tiempo exponencial, O(n^(t/min)) en el peor caso, porque la
+combinación más larga tiene t/min elementos y en cada nivel se prueban hasta n
+candidatos. Espacio O(t/min) por la pila de recursión, más el tamaño de la
+salida. n = número de candidatos, t = target, min = candidato más pequeño.
+
+Código: [combination-sum/Solution.java](combination-sum/Solution.java)
+
+![Accepted — Combination Sum](evidencias/combination-sum-accepted.png)
