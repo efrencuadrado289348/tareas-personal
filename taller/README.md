@@ -34,3 +34,26 @@ peor caso por la pila de recursión. m = filas, n = columnas.
 Código: [number-of-islands/Solution.java](number-of-islands/Solution.java)
 
 ![Accepted — Number of Islands](evidencias/number-of-islands-accepted.png)
+
+
+
+## 1143. Longest Common Subsequence
+
+Enlace: https://leetcode.com/problems/longest-common-subsequence/
+
+Familia: programación dinámica
+
+Estado: dp[i][j] = longitud de la LCS de los primeros i caracteres de text1
+y los primeros j caracteres de text2.
+
+Base: dp[0][j] = dp[i][0] = 0 (un prefijo vacío no comparte nada).
+
+Recurrencia: si text1[i-1] == text2[j-1], dp[i][j] = dp[i-1][j-1] + 1;
+si no, dp[i][j] = max(dp[i-1][j], dp[i][j-1]).
+
+Complejidad: tiempo Θ(n·m) y espacio Θ(n·m) por la tabla.
+n = longitud de text1, m = longitud de text2.
+
+Código: [longest-common-subsequence/Solution.java](longest-common-subsequence/Solution.java)
+
+![Accepted — Longest Common Subsequence](evidencias/longest-common-subsequence-accepted.png)
